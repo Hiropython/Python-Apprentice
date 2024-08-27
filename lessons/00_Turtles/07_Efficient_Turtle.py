@@ -16,23 +16,31 @@ tina.shape('turtle')                    # Set the shape of the turtle to a turtl
 tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
 
 def draw_polygon(sides):
-
-    angle = ... # Calculate angle from number of sides
     
-    for i in range(...):                 # Loop through the number of sides
-        ...                              # Move tina forward by the forward distance
-        ...                              # Turn tina left by the left turn
+    angle = 360/sides# Calculate angle from number of sides
+    
+    for i in range(sides):   
+        tina.forward(50)
+        tina.left(angle)
+
+                  # Loop through the number of sides
 
 
-draw_polygon(...)                        # Draw a square
+draw_polygon(3)                        # Draw a square
 
 ...                                      # Move tina to another spot on the screen
 
-draw_polygon(...)                        # Draw a pentagon
+draw_polygon(5)                        # Draw a pentagon
 
 ...                                      # Move tina to another spot on the screen
 
-draw_polygon(...)                        # Draw a hexagon
+draw_polygon(8) 
+
+draw_polygon(12)
+
+draw_polygon(15)
+
+                   # Draw a hexagon
 
 
 turtle.exitonclick()                     # Close the window when we click on it
