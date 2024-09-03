@@ -34,7 +34,7 @@ draw_polygon(5)                        # Draw a pentagon
 
 ...                                      # Move tina to another spot on the screen
 
-draw_polygon(8) 
+draw_polygon(6) 
 
 draw_polygon(12)
 

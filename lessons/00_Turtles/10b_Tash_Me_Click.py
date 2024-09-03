@@ -5,5 +5,5 @@
 #
 # Hint: See 08a_More Turtle Programs, section 'Click on the Screen'
  
-... # Your code here
+
 
