@@ -40,9 +40,9 @@ for i in range(25):
    
     t.begin_fill()
 
-    t.forward(64) 
+    t.forward(62) 
 
-    t.left(40) 
+    t.left(114) 
 
     t.forward(flameSize) 
 
@@ -50,7 +50,7 @@ for i in range(25):
 
     t.forward(flameSize) 
 
-    t.right(62) 
+    t.right(10) 
 
     t.forward(baseSize) 
 

@@ -8,6 +8,13 @@ at the comments and the code snippets in the previous lessons, like
 
 
 """
+from tkinter import messagebox, simpledialog, Tk # import required modules
+
+window = Tk()     # Create a window object
+window.withdraw() # Hide the window; we just want to see pop ups
+Number= simpledialog.askinteger("Number", "What is your first number?")
+Number2= simpledialog.askinteger("Number2", "What is your secound number?")
+messagebox.showinfo('What the sum is',Number + Number2 )
 
 # Import the required modules
 
