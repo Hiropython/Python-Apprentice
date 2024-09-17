@@ -27,8 +27,23 @@ window.withdraw() # Hide the window; we just want to see pop ups
 Number= simpledialog.askinteger("Number", "What is your first number?")
 Number2= simpledialog.askinteger("Number2", "What is your secound number?")
 Operation = simpledialog.askstring("Operation","What operation?")
-
 if Operation == "add":
+    messagebox.showinfo('What the sum is',Number + Number2 )
+
+elif Operation == "subtract":
+    messagebox.showinfo('What the diffrence is',Number - Number2 )
+
+elif Operation == "multiply":
+    messagebox.showinfo('What the product is',Number * Number2 )
+
+elif Operation == "divide":
+    messagebox.showinfo('What the quotient is',Number / Number2 )
+
+else: 
+    messagebox.showinfo('error',"invalid operation, try add, subtract, multiply, or divide" )
+
+
+
     #Continue from here
 # Import the required modules
 
