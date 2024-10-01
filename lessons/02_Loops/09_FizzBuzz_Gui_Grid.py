@@ -40,6 +40,21 @@ app = App("Numbers Grid", layout="grid")
 
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
-# Call Text(app, text='...', grid=[col, row], color=...) to display something. 
+# Call  to display something. 
 
 app.display()
+
+for i in range (10):
+    for j in range (1,11):
+        #print(10*i+j,end=" ")
+        if 10*i+j % 15 == 0:
+            print(i, '🐍 snake!')
+        elif 10*i+j % 5 == 0:
+            print(i, '🦡 badger')
+        elif 10*i+j % 3 == 0:
+            print(i, '🍄 mushroom')
+        else:
+            print(i)
+   
+        Text(app, text='', grid=[col, row], color=...)
+    print()
