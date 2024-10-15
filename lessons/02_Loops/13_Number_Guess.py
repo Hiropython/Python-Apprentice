@@ -29,16 +29,32 @@ NOTE! The prompts and output for your program will be in the teminal
 at the bottom of the editor screen; this program does not use the GUI.
 
 """
-
 import random
+#n=random.randint(1, 100)
+#while n%7==0:
+n=random.randint(1, 100)
 
-def ask_integer(prompt):
-    """Function to ask the user for an integer"""
-    while True:
-        try:
-            return int(input(prompt))
-        except ValueError:
-            print("Please enter a valid number!")
+
+def ask_integer():
+    #guess = ask_integer("Guess a number between 1 and 100")
+    correct= False
+    while not correct:
+    #     while n==guess:
+    #         guess = ask_integer("Guess a number between 1 and 100") 
+        guess = int(input("Guess a number between 1 and 100:   "))
+        if n>guess: 
+            print ("too low")
+            continue
+        elif n<guess:
+            print ("too high")
+            continue
+        else:
+            print(f"Congrats you guessed the number: {n}")
+            correct=True
+        # try:
+        #     return int(input(prompt))
+        # except ValueError:
+        #     print("Please enter a valid number!")
 
 
 # Pick the random number
@@ -53,4 +69,4 @@ def ask_integer(prompt):
     # If the user's guess is too low, tell the user
     # If the user's guess is correct, tell the user and break out of the loop
 
-
+ask_integer()
