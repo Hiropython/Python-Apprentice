@@ -8,6 +8,14 @@ O_MARK = "O"
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
 
 def check_row(l):
+    if l[0]==l[1]and l[1]==l[2]:
+        return l[0]
+    return None
+
+
+    
+    
+
     """Check if a player won on a row
     Args:
         l: a 3 element iterable
@@ -19,6 +27,44 @@ def check_row(l):
     return None
 
 def check_win(board):
+    winner=check_row(board[0])
+    if winner:
+        return winner
+    winner=check_row(board[1])
+    if winner:
+        return winner
+    winner=check_row(board[2])
+    if winner:
+        return winner
+    #columns=[[board[0][i],board[1][i],board[2][i]] for i in range (3)]
+    columns=list(zip(*board))
+    winner=check_row(columns[0])
+    if winner:
+        return winner
+    winner=check_row(columns[1])
+    if winner:
+        return winner
+    winner=check_row(columns[2])
+    if winner:
+        return winner
+    locations=[[0,0]
+               ,[1,1]
+               ,[2,2]]
+    diagonal=[board[col][row] for (col,row) in locations]
+    winner = check_row(diagonal)
+    if winner:
+        return winner
+    locations=[[0,2],
+               [1,1],
+               [2,0]]
+    diagonal=[board[col][row] for (col,row) in locations]
+    winner = check_row(diagonal)
+    if winner:
+        return winner
+    
+
+
+    
     """Check if a player has won on a board
     Args:
         board: a 3x3 2D array
